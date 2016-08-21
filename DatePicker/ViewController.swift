@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func dpkDatePicker(sender: UIDatePicker) {
+        let datePickerView = sender
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
+        lblPickerTime.text = "선택시간: " + formatter.stringFromDate(datePickerView.date)
+        
     }
 
 }
